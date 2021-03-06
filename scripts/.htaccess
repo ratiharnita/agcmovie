@@ -1,0 +1,63 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^p=([0-9]+)$ post.php?po=$1 [L]
+RewriteRule sitemap.xml$ sitemap.php [L]
+RewriteRule feed$ rss.php [L]
+RewriteRule ^go/(.*)$ index.php?do=go&id=$1 [L]
+
+RewriteRule ^(page|category|author|tag|go|person|area)/(.*)/(.*)$ index.php?do=$1&id=$2&page=$3 [L]
+RewriteRule ^(page|category|author|tag|go|person|area)/(.*)$ index.php?do=$1&id=$2 [L]
+RewriteRule ^(page|category|author|tag|go|person|area)$ index.php?do=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^search/(.*)(\/|\.)(.*)$ search.php?id=$1&slug=$2 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ post.php?po=$1 [QSA,L]
+</IfModule>
+
+ErrorDocument 404 /index.php
+
+<IfModule mod_security.c>
+     SecFilterEngine Off
+</IfModule>
+
+<IfModule mod_headers.c>
+     Header set Connection keep-alive
+     # 1 year
+     ExpiresActive On
+     ExpiresByType image/jpg "access 1 year"
+     ExpiresByType image/jpeg "access 1 year"
+     ExpiresByType image/gif "access 1 year"
+     ExpiresByType image/png "access 1 year"
+     ExpiresByType text/css "access 1 month"
+     ExpiresByType text/html "access 1 month"
+     ExpiresByType application/pdf "access 1 month"
+     ExpiresByType text/x-javascript "access 1 month"
+     ExpiresByType application/x-shockwave-flash "access 1 month"
+     ExpiresByType image/x-icon "access 1 year"
+     ExpiresDefault "access 1 month"
+
+     # 2 DAYS
+     <FilesMatch "\.(xml|txt)$">
+         Header set Cache-Control "max-age=172800, public, must-revalidate"
+     </FilesMatch>
+
+     # 45 MIN
+     <FilesMatch "\.(html|htm)$">
+         Header set Cache-Control "max-age=2700, public, must-revalidate"
+     </FilesMatch>
+
+     # No cache
+     <FilesMatch "\.(pl|php|cgi|spl)$">
+         Header unset Cache-Control
+         Header unset Expires
+         Header unset Last-Modified
+         FileETag None
+         Header unset Pragma
+     </FilesMatch>
+</IfModule>   

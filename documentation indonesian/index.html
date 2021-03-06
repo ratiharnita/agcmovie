@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Panduan Install Ocimpress - OcimScripts.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+    <style>body{padding-bottom:50px;}</style>
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Panduan Install Ocimpress - OcimScripts.com</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="#">Welcome</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#introduction"><i class="icon-chevron-right"></i> Introduction</a></li>
+          <li><a href="#upload"><i class="icon-chevron-right"></i>Upload Files</a></li>
+          <li><a href="#databasesettings"><i class="icon-chevron-right"></i>Database Settings</a></li>
+          <li><a href="#installation"><i class="icon-chevron-right"></i>Installation</a></li>
+          <li><a href="#adminpanel"><i class="icon-chevron-right"></i> Admin Dashboard</a></li>
+          <li><a href="#themes"><i class="icon-chevron-right"></i> Activated Themes</a></li>
+          <li><a href="#requirement"><i class="icon-chevron-right"></i> Requirement</a></li>
+          <li><a href="#setting"><i class="icon-chevron-right"></i> Setting</a></li>
+          <li><a href="#thanks"><i class="icon-chevron-right"></i> Thank you</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Dropdowns
+        ================================================== -->
+        <section id="introduction">
+          <div class="page-header">
+            <h1>Introduction</h1>
+             <p>
+		<p>Terima kasih telah menyempatkan untuk membaca panduan sederhana yang telah saya buat ini, mohon untuk dipahami bagaimana cara install cms terlebih dahulu. Jikalau memang anda merasa kesulitan silahkan langsung hubungi saya, alamat email dan sebagainya ada dibawah tutorial ini.</p>
+ </div>
+ </section>
+
+
+<section id="upload">
+<h3>Upload the files</h3>
+<p>Untuk cara install silahkan ikuti tutorial dibawah ini:</p>
+<ul>
+    <li>Extract file "<b>scripts.zip</b>" ke folder file manager hosting dimana folder tersebut akan anda install untuk Sosbok. Contoh file manager menggunakan cpanel:<br><br><img src="assets/images/uploadfiles.jpg" width="600"></li>
+    <li>Jika berhasil nanti akan seperti ini<br><br><img src="assets/images/uploadfilesberhasil.jpg" width="600"></li>
+
+</ul>
+<hr>
+</section>
+
+
+<section id="databasesettings">
+<h3>Database Settings</h3>
+Cara membuat database dibawah ini menggunakan cpanel jadi sesuaikan dengan hosting anda:
+<ol>
+    <li>Masuk ke sub menu "<b>MySQL Database Wizard</b>" yang berada di menu Database.<br><br><img src="assets/images/mysqldbwizard.jpg" width="385"></li>
+    <li>Kemudian isi kolom kosong dibawah tulisan "<b>Step 1: Create A Database</b>", dimana ini bertujuan untuk membuat sebuah database baru. Jika sudah silahkan klik tulisan <i>Next Step</i>.<br><br><img src="assets/images/createdatabase.jpg" width="427"></li>
+    <li>Sama dengan langkah kedua silahkan isi kolom kosong dan harap catat "<b>passwordnya</b>".<br><br><img src="assets/images/createdatabaseuser.jpg" width="539"></li>
+    <li>Jika berhasil maka selanjutnya yaitu memberikan hak PRIVILEGES, silahkan centang tombol checkbox pada tulisan "<b>ALL PRIVILEGES</b>".<br><br><img src="assets/images/createdatabasefinish.jpg" width="581"></li>
+    <li>Contoh jika berhasil akan seperti ini.<br><br><img src="assets/images/createdatabaseberhasil.jpg" width="600"></li>
+</ol>
+</section>
+
+
+
+<section id="installation">
+<h3>Installation Scripts</h3>
+		
+<p>Jika semuanya sudah dipersiapkan dari upload file serta membuat database, maka langkah selanjutnya yaitu install CMS OcimPress. Berikut ini langkah-langkahnya:<br>
+<ol>
+    <li>Buka tab baru di browser anda, kemudian ketik nama domain yang akan anda install tersebut *(Misal: http://domain.com/). Jika sudah maka akan diarahkan kehalaman <i>http://domain.com/setup/install.php</i>, tampilannya akan seperti ini:<br><br><img src="assets/images/install1.jpg" width="456"></li>
+    <li>Klik tombol "<b>Next</b>" terus sampai nanti berada dihalaman <i>General Configuration</i>, dimana halaman ini bertujuan untuk mengisi Database serta informasi admin.</li>
+    <li>Langkah awal pada kolom pertama "<b>MySQL database configuration</b>" yaitu mengisi informasi database, silahkan isi sesuai dengan apa yang anda sudah buat sebelumnya lalu masukan kedalam form yang tersedia (Untuk kolom "<b>MySQL Hostname</b>" bagi pengguna cpanel biasa secara default yaitu <i>localhost</i>, tapi jika anda menggunakan hosting gratis seperti idhostinger maka akan berbeda jadi sesuaikan).<br><br><img src="assets/images/mysql configuration.jpg" width="600"></li>
+    <li>Untuk kolom kedua "<b>Common configuration</b>" anda bebas mengisinya tapi harap ingat alamat domain pada kolom <i>URL</i> jangan anda ubah.<br><br><img src="assets/images/commonconfiguration.jpg" width="600"></li>
+    <li>Kolom terakhir "<b>Administrator configuration</b>" harap anda ingat untuk username dan password, karena nantinya akan digunakan untuk data login ke menu admin panel.<br><br><img src="assets/images/adminconfiguration.jpg" width="600"></li>
+    <li>Jika sudah silahkan klik tombol Next, jika gagal maka akan ada notifikasi dimana letak kesalahan anda. Tetapi jika berhasil tampilan akhir akan seperti ini, lalu klik tombol "<i>admin</i>" untuk masuk ke menu dashboard admin:<br><br><img src="assets/images/installcompleted.jpg" width="600"></li>
+</ol>
+<hr>
+</section>
+
+
+<section id="adminpanel">
+<h3>Admin Dashboard</h3>
+      <p>Pada halaman admin anda bisa menemukan berbagai macam menu seperti posts, page, comment dan lainnya. Namun langkah awal yang harus anda lakukan yaitu mengatur pengaturan situs sendiri tepatnya berada di menu "<b>Setting</b>", nah silahkan anda buka satu-satu dan atur sesuai keinginan anda.<br><br><img src="assets/images/menusettings.jpg" width="446"></p>
+<hr>
+</section>
+
+
+<section id="themes">
+<h3>Themes</h3>
+<p>
+Untuk themes default sendiri terdapat 3 terakhir saya tulis tutorial ini, dimana anda bebas untuk mengedit maupun menggunakannya. Jika anda membeli sebuah themes premium dari ocimscripts.com maka setting akan bertambah, contoh jika anda membeli theme <b>AGC Video Tubeless V1.0</b> maka akan seperti ini langkahnya.
+<ol>
+<li>Silahkan masuk terlebih dahulu ke halaman themes letaknya berada di menu <b>Appearance</b> -> <b>Themes</b>.<br><br><img src="assets/images/apperance.jpg" width="161"><br></li>
+<li>Kemudian arahkan cursor mouse anda ke themes bernama <b>Tubeless</b>, maka nanti akan muncul sebuah tombol 'Activate' dan klik tombol tersebut.<br><br><img src="assets/images/aktifthemes.jpg" width="400"><br></li>
+<li>Selesai dan silahkan buka domain anda untuk memastikan semuanya berjalan normal.</li>
+</ol>
+</p>
+<hr>
+</section>
+
+<section id="setting">
+<h3>Setting</h3>
+<p>Pada script ocim movie2k setting atau pengaturan terdapat di menu home, anda tinggal menuju halaman depan dan klik menu admin seperti gambar dibawah ini:<br><br><img src="assets/images/menusettingadmin.jpg" width="600"><br><br></p>
+<p>Cara memasukan hoster atau language tinggal menulis nama dan pilih file yang sudah saya sediakan beberapa di folder Icon and flag.<br><br><img src="assets/images/uploadhoster.jpg" width="600"><br></p>
+<hr>
+</section>
+
+<section id="requirement">
+<h3>Requirement </h3>
+<ul>  
+<li>PHP 5.3+</li>
+<li>MySQL and MySQLi 5+</li>
+<li>Operating System : Linux</li>
+<li>Web Server : Apache</li>
+<li>mod_rewrite - Apache HTTP Server</li>
+</ul>
+<hr>
+</section>
+
+<section id="thanks">
+<p>
+Thank you for purchasing this script. If you have any questions that are beyond the scope of this help file, please feel free to email us via our email address <br>
+<strong>alimunandar@gmail.com</strong><br>
+<strong>http://www.ocimscripts.com</strong><br>
+<strong>http://ocimpress.com</strong><br>
+ Thanks so much!
+</p>
+</section>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer>
+ <div class="navbar navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="container" style="font-size:11px; padding-top:10px;">
+           Documented 2014 <a href="http://www.ocimscripts.com/" target="_blank"> OcimScripts.com </a> Alrights Reserved
+        </div>
+      </div>
+    </div>    </footer>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/prettify.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+    <script src="assets/js/application.js"></script>
+
+
+
+  </body>
+</html>

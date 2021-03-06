@@ -1,0 +1,23 @@
+Inatallation
+
+1. Unzip or extract 'script' file on your file manager hosting.
+
+2. Create MySQL databases.
+
+3. Open browser then type your domain, exampe http://www.yoursite.com/ or http://www.yoursite.com/setup for installation cms.
+
+4. After success login to admin panel, http://www.yoursite.com/oc-admin
+
+5. Activated themes, Appearance -> Themes -> Movie2k click Activate, preview: http://prntscr.com/5g82ic
+
+6. For setting and manage site just go to homepage then find menu admin on top, preview: http://prntscr.com/5g82vi
+ 
+
+If you need any assistance of any kind, please feel free to ask.
+We are always here to assist you.
+
+If you don't know understand installation proccess, we can install script on your server FREE.
+
+Thanks a lot,
+
+
